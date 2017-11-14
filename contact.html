@@ -11,18 +11,18 @@
     <div class="container">
         <div class="form-container front">
         	<h1 class="form-label">Contact Me</h1>
-            <form>
+            <form action="http://formspree.io/katiapunter@gmail.com" method="POST">
                 <div class="group">
-                    <input type="text" required placeholder="Name" class="inputField">
+                    <input type="text" name="name" required placeholder="Name" class="inputField">
                     <label>Name</label>
                 </div>
                 <div class="group">
-                    <input type="text" required placeholder="E-mail" class="inputField">
+                    <input type="text" name="email" required placeholder="E-mail" class="inputField">
                     <label>Email</label>
                 </div>
                 <!-- Message body -->
-                <textarea class="message-form-control"></textarea>
-                <button type="button" class="button">Submit</button>
+                <textarea class="message-form-control" name="message"></textarea>
+                <input type="submit" value="Submit" class="button">
             </form>
         </div>
     </div>
