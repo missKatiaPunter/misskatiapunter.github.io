@@ -38,9 +38,9 @@ ul {
 .Header {
 	background-color: #000000;
 }
-.Rollover:hover{
+/*.Rollover:hover{
 	background-color: #d51270;
-}
+}*/
 .Navigation {
 	list-style: none;
 	/*margin-top:20px;     changes the margin thickness which is outside the box*/
@@ -48,14 +48,26 @@ ul {
 	padding-left: 0;
 }
 .Navigation li a {
-	font-size: 17px;
+	font-size: 18px;
 	font-style: normal;
-	color: #ffffff;
+	color: #fff;
+	text-decoration: underline;
 }
 .Navigation li {
-	padding-right: 15px;
+	padding-right: 18px;
 	display: inline-block;
+	text-decoration: none;
 }
+.Navigation li a:hover{
+	color: #fff;
+	text-decoration: underline;
+}
+.Navigation li a:active{
+	color: #fff;
+	text-decoration: none;
+}
+
+
 .Cards {
 	padding: 0;
 	margin: 0;
