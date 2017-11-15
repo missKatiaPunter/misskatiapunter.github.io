@@ -206,3 +206,31 @@ ul {
 		background-color: #000000;
 	}
 }
+/*styles for the codewars button*/
+#codewars-butn{
+  position: relative;
+  width:100px;
+  background-color: #B21C15;
+  border: 2px solid;
+  border-radius: 10px;
+}
+body{
+  background-color: #3F2740;
+}
+.codewars{
+  display: inline-block;
+  stroke:#000;
+  stroke-dasharray: 1 5;
+}
+
+#codewars-butn:hover svg{
+  animation-name: rotate;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg) }
+  to { transform: rotate(360deg) }
+}
