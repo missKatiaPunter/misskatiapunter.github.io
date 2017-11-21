@@ -19,12 +19,12 @@ ul {
 	padding-left: 0;
 }
 .Photo {
-	border-radius: 48px;
-    max-width: 100px;
-    height: 98px;
+	border-radius: 50%;
+    max-width: 20%;
 	margin: 10px auto 20px auto;
 	display: block;
     filter: grayscale(100%);
+    border: 5px solid #FC9CFF;
 }
 .Container{
 	font-family: 'Arial', sans-serif;
