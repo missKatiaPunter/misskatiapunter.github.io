@@ -1,0 +1,43 @@
+body,html{
+	margin: 0 ;
+	width: 100%;
+	height: 100%;
+	background: #3c3c3c;
+}
+.containerTitle{
+  background-color:grey;
+  width:60%;
+  padding:0%;
+  margin:0;
+  text-align: center;
+  display:block;
+}
+#app-title{
+  font-family: Arial;
+  font-size:7em;
+}
+.nav_link{
+	font-family: Lobster Two;
+	display:block;
+	list-style: none;
+	text-align: center;
+	text-decoration: none;
+	font-size: 60px;
+	transition: .2s;
+}
+.nav_link a li{
+	padding: 20px;
+}
+.nav_link a{
+	width:100%;
+	text-decoration: none;
+	color: #000;
+	font-weight: 600;
+	transition: .3s;
+}
+.nav_link a li:hover{
+	background:#6A1B9A;
+}
+.nav_link a:hover{
+	color: #fff;
+}
