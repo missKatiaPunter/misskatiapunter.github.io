@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Katia Punter Founders and Coders Application</title>
+    <title>Katia Punter - Founders and Coders Application</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Russo One" rel="stylesheet"><!--Google fonts-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!--Font Awesome-->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,7 +16,7 @@
             <li class="Navigation-current">Portfolio</li>
             <li><a href="contact.html">Contact</a></li>
         </ul><!--unordered list to make links easier to read-->
-    </nav><!--html 5-->
+    </nav><!--html 5, navigation bar ends-->
 </header>
 
 <main class="Container">
@@ -23,24 +24,37 @@
     <p>Codebar student and occasional coach</p>
     <p>Former Computer Science teacher</p>
     <img class="Photo" src="photoProfile.png" alt="Photo of me">
-    <p>Below you can find the links to my accounts @ coding communities</p>
-    <ul class="Cards Grid">
+    <p>Founders and Coders prerequisites:</p>
+    <div class="flex-container-communities">
+        <!-- <a href="https://www.codewars.com/users/missKatiaPunter"> -->
+        <div class="communities-link" id="codewars-butn">
         <a href="https://www.codewars.com/users/missKatiaPunter">
-            <div id="codewars-butn">
-                <svg class="codewars" width="100" height="100">
+            <svg class="codewars" width="100" height="100">
                 <defs>
                     <path id="curve" d="M50 50 A 20 20 0 1 0 80 70" stroke-width="10" stroke-linecap="round" fill="none"/>
                 </defs>
-            <use href="#curve"/>
-            <use href="#curve" transform="rotate(60, 50, 50)"/>
-            <use href="#curve" transform="rotate(120, 50, 50)"/>
-            <use href="#curve" transform="rotate(180, 50, 50)"/>
-            <use href="#curve" transform="rotate(240, 50, 50)"/>
-            <use href="#curve" transform="rotate(300, 50, 50)"/>
-    </svg>
-  </div>
+                <use href="#curve"/>
+                <use href="#curve" transform="rotate(60, 50, 50)"/>
+                <use href="#curve" transform="rotate(120, 50, 50)"/>
+                <use href="#curve" transform="rotate(180, 50, 50)"/>
+                <use href="#curve" transform="rotate(240, 50, 50)"/>
+                <use href="#curve" transform="rotate(300, 50, 50)"/>
+            </svg>
+        </a>
+        </div>
+        <div class="communities-link" id="free-code-camp-butn">
+            <a href="https://www.freecodecamp.org/misskatiapunter">
+            <i class="fa fa-free-code-camp ffc-text"></i>
+        </a>
+        </div>
+        
+        <div class="communities-link" id="github-button">
+            <a href="https://github.com/missKatiaPunter/misskatiapunter.github.io">
+            <img src="Octocat.png" alt="Github" height="80%" width="90%">
+        </div>
+    </div>
+ 
 
-    </ul>
 </main>
 </body>
 </html>

@@ -1,4 +1,4 @@
-/*Your styles goes here*/
+/*general styles*/
 body {
     font-family: 'Arial', sans-serif;
     font-size: 16px;
@@ -18,9 +18,14 @@ ul {
 	margin-bottom: 0;
 	padding-left: 0;
 }
+a {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+}
 .Photo {
 	border-radius: 50%;
-    max-width: 20%;
+    max-width: 15%;
 	margin: 10px auto 20px auto;
 	display: block;
     filter: grayscale(100%);
@@ -30,21 +35,15 @@ ul {
 	font-family: 'Arial', sans-serif;
 	font-weight: bold;
 	font-size: 16px;
-	padding: 10px;
-	max-width: 900px;
 	margin: 0 auto;
 	text-align: center;
 }
 .Header {
 	background-color: #000000;
 }
-/*.Rollover:hover{
-	background-color: #d51270;
-}*/
+/*Navigation bar*/
 .Navigation {
 	list-style: none;
-	/*margin-top:20px;     changes the margin thickness which is outside the box*/
-	/*padding-top: 20px;       */
 	padding-left: 0;
 }
 .Navigation li a {
@@ -66,37 +65,125 @@ ul {
 	color: #fff;
 	text-decoration: none;
 }
+/*Styles for the flex div with links to communities / prerequisites*/
+.flex-container-communities{
+  position: relative;
+  width:100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.communities-link{
+  position: relative;
+  width:100px;
+  height:100px;
+  border: 3px solid;
+  border-radius: 10px;
+  outline: none;
+  margin:1%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#free-code-camp-butn{
+  background-color: #006400;
+  font-size: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ffc-text:hover {
+  background: linear-gradient(to top, #FFF 20%, #F00 40%, #F00 60%, #FFF 80%);
+  background-size: 400% auto;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: flare 5s ease infinite;
+}
+@keyframes flare{
+  0%{background-position: 250% 0%;}
+  50%{background-position: 0% 20%;}
+  100%{background-position: 250% 0%;}
+}
+.ffc-text{
+  justify-content: center;
+  align-items: flex-end;
+  color:#fff;
+}
+#codewars-butn{
+  background-color: #B21C15;
+}
+/*body{
+  background-color: #3F2740;
+}*/
+.codewars{
+  display: inline-block;
+  stroke:#000;
+  stroke-dasharray: 1 5;
+}
+#codewars-butn:hover svg{
+  animation-name: rotate;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
 
+@keyframes rotate {
+  from { transform: rotate(0deg) }
+  to { transform: rotate(360deg) }
+}
+#github-button{
+	background-color: #fff;
+	transition: background 3s;
+}
+#github-button:hover {
+  	background:
+		linear-gradient(cyan, transparent),
+		linear-gradient(-45deg, magenta, transparent),
+		linear-gradient(45deg, yellow, transparent);
+	background-blend-mode: multiply;
+}
 
-.Cards {
-	padding: 0;
-	margin: 0;
+/*Media queries*/
+@media all and (min-width: 480px) {
+	/*Component styles*/
+	.Card-info {
+		min-height: 180px;
+	}
+	/*Grid styles*/
+	.Grid-item {
+		width: 48%;
+	}
 }
-.Card {
-	margin-bottom: 20px;
-	background-color: #eeeeee;
-	list-style: none;
-	transition: all .4s;
+@media all and (max-width: 959px) {
+	/*Global styles*/
+	h1 {
+		font-size: 60px;
+	}
+	p{
+		font-size: 20px;
+	}
+	.flex-container-communities{
+	}
 }
-.Card:hover{
-	transform: scale(0.9);
+@media all and (max-width: 640px) {
+	/*Global styles*/
+	h1 {
+		font-size: 30px;
+	}
+	p{
+		font-size: 10px;
+	}
+	.flex-container-communities{
+		display: flex;
+		justify-content: center;
+  		flex-direction: column;
+  		align-items: center;
+	}
 }
-.Card:hover{
-	background-color: #eeee0e;
-	transform: scale(1.2);
-}
-.Card:hover ~ .Card{
-	background-color: #eee00e;
-	transform: scale(0.8);
-}
-.Grid {
-	overflow: hidden;
-}
-.Grid-item {
-	margin: 1%;
-	float: left;
-	width: 100%;
-}
+/*Styles for the contact form page*/
+
 .form-container {
   background-color: #FFF;
   border: 2px solid #000;
@@ -193,44 +280,6 @@ ul {
 .button.raised:active {
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
 }
-@media all and (min-width: 600px) {
-	/*Component styles*/
-	.Card-info {
-		min-height: 180px;
-	}
-	/*Grid styles*/
-	.Grid-item {
-		width: 48%;
-	}
-	.Card{
-		background-color: #000000;
-	}
-}
-/*styles for the codewars button*/
-#codewars-butn{
-  position: relative;
-  width:100px;
-  background-color: #B21C15;
-  border: 2px solid;
-  border-radius: 10px;
-}
-body{
-  background-color: #3F2740;
-}
-.codewars{
-  display: inline-block;
-  stroke:#000;
-  stroke-dasharray: 1 5;
-}
 
-#codewars-butn:hover svg{
-  animation-name: rotate;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
 
-@keyframes rotate {
-  from { transform: rotate(0deg) }
-  to { transform: rotate(360deg) }
-}
+
