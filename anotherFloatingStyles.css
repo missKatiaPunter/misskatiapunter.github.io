@@ -75,7 +75,6 @@ ul {
 	margin: 0 0 30px;
 	color: #fff;
 }
-
 .contact-form-container .input-field{
 	position: relative;
 }
@@ -128,4 +127,54 @@ ul {
     top:-29px;
     left: 60px;
     pointer-events: none;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg) }
+  to { transform: rotate(360deg) }
+}
+#github-button{
+	background-color: #fff;
+	transition: background 3s;
+}
+#github-button:hover {
+  	background:
+	linear-gradient(cyan, transparent),
+	linear-gradient(-45deg, magenta, transparent),
+	linear-gradient(45deg, yellow, transparent);
+	background-blend-mode: multiply;
+}
+
+/*Media queries*/
+@media all and (min-width: 480px) {
+	/*Component styles*/
+	.Card-info {
+		min-height: 180px;
+	}
+	/*Grid styles*/
+	.Grid-item {
+		width: 48%;
+	}
+}
+@media all and (max-width: 959px) {
+	/*Global styles*/
+	h1 {
+		font-size: 60px;
+	}
+	p{
+		font-size: 20px;
+	}
+}
+@media all and (max-width: 640px) {
+	/*Global styles*/
+	.contact-form-container{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 90%;
+	}
+	h1 {
+		font-size: 2em;
+	}
 }
