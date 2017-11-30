@@ -231,7 +231,6 @@ a {
 .links-projects a:hover{
   color:#FF0060;
   text-decoration-color: #5E0023;
-  
   text-decoration: underline;
   text-decoration-style: dotted;
 }
@@ -357,5 +356,11 @@ a {
 	}
   .navigation-right{
     display:none;
+  }
+  .contact-form-container{
+    padding: 2px;
+  }
+  .contact-form-container h1{
+    font-size: 1em;
   }
 }
