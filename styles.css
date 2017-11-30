@@ -1,10 +1,10 @@
 /*general styles*/
 body {
-    font-family: 'Arial', sans-serif;
-    font-size: 16px;
-    background-color: #3F2740;
-    color: #FC9CFF;
-    margin: 0px;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  background-color: #3F2740;
+  color: #FC9CFF;
+  margin: 0px;
 }
 p{
 	margin:0px;
@@ -110,7 +110,7 @@ a {
 	font-size: 18px;
 	font-style: normal;
 	color: #fff;
-	text-decoration: underline;
+	text-decoration: none;
 }
 .Navigation li {
 	padding-right: 18px;
@@ -126,7 +126,7 @@ a {
 	color: #fff;
 	text-decoration: none;
 }
-/*Styles for the flex div with links to communities / prerequisites*/
+/*Styles for the flex div with links to communities / prerequisites; general style for the link to community div*/
 .flex-container-communities{
   text-align: center;
   position: relative;
@@ -134,6 +134,7 @@ a {
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  margin-bottom: 5em;
 }
 .communities-link{
   position: relative;
@@ -175,12 +176,10 @@ a {
   align-items: flex-end;
   color:#fff;
 }
+/*styles for animated codewars link*/
 #codewars-butn{
   background-color: #B21C15;
 }
-/*body{
-  background-color: #3F2740;
-}*/
 .codewars{
   display: inline-block;
   stroke:#000;
@@ -192,7 +191,23 @@ a {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
-/*Styles for other projects*/
+@keyframes rotate {
+  from { transform: rotate(0deg) }
+  to { transform: rotate(360deg) }
+}
+/*Styles for the github link*/
+#github-button{
+	background-color: #fff;
+	transition: background 3s;
+}
+#github-button:hover {
+  background:
+	linear-gradient(cyan, transparent),
+	linear-gradient(-45deg, magenta, transparent),
+	linear-gradient(45deg, yellow, transparent);
+	background-blend-mode: multiply;
+}
+/*Styles for other projects such as codepens and stack overflow*/
 .projects-link{
   position: relative;
   width:12em;
@@ -208,23 +223,22 @@ a {
   justify-content: center;
   padding: 1%;
 }
-
-@keyframes rotate {
-  from { transform: rotate(0deg) }
-  to { transform: rotate(360deg) }
+.links-projects a:link{
+  color:#FF0060;
+  text-decoration: none;
+  font-style: normal;
 }
-#github-button{
-	background-color: #fff;
-	transition: background 3s;
+.links-projects a:hover{
+  color:#FF0060;
+  text-decoration-color: #5E0023;
+  
+  text-decoration: underline;
+  text-decoration-style: dotted;
 }
-#github-button:hover {
-  	background:
-		linear-gradient(cyan, transparent),
-		linear-gradient(-45deg, magenta, transparent),
-		linear-gradient(45deg, yellow, transparent);
-	background-blend-mode: multiply;
+.link-projects{
+  background: rgba(0,0,0,.3);
 }
-/*Floating labels form*/
+/*Floating labels contact form*/
 .chat-icon{
   padding: 20px;
   font-size:50px;
@@ -232,7 +246,7 @@ a {
 .contact-form-container{
   width: 60%;
   padding: 40px;
-  margin: 0px auto;
+  margin: 0 auto;
   background: rgba(0,0,0,.6);
   box-sizing: border-box;
   box-shadow: 0 10px 10px rgba(0,0,0,.5);
@@ -281,7 +295,6 @@ a {
   font-family: Arial;
   padding: 10px 30px 10px 10px;
   background-color: #FC9CFF;
-
   outline:none;
 }
 .plane-icon{
@@ -289,13 +302,32 @@ a {
     color: black;
 
 }
+.plane-icon:hover{
+  color: #004C13;
+}
 .plane-icon:after {
-    font-family: FontAwesome;
-    content: "\f1d8";
-    font-size: 18px;
-    position: relative;
-    pointer-events: none;
-    margin-left: -25px;
+  font-family: FontAwesome;
+  content: "\f1d8";
+  font-size: 18px;
+  position: relative;
+  pointer-events: none;
+  margin-left: -25px;
+}
+.social-media-links{
+  margin: 10em;
+  padding:3em;
+  text-align: center;
+}
+/*Social media icons section*/
+.social-media-links a:link{
+  text-decoration: none;
+  font-size: 2em;
+  transition: 0.5s;
+}
+.social-media-links a:hover{
+  text-decoration: none;
+  font-size: 3em;
+  transition: 0.5s;
 }
 
 /*Media queries*/
@@ -307,8 +339,6 @@ a {
 	}
 	p{
 		font-size: 20px;
-	}
-	.flex-container-communities{
 	}
 }
 @media all and (max-width: 640px) {
@@ -329,104 +359,3 @@ a {
     display:none;
   }
 }
-/*Styles for the contact form page*/
-
-.form-container {
-  background-color: #FFF;
-  border: 2px solid #000;
-  padding: 40px;
-  margin-bottom: 40px;
-  margin: 2rem auto;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-  text-align: center;
-  position: relative;
-}
-
-.form-label {
-  position: relative;
-  left: 3rem;
-  padding: 0;
-  margin: 0;
-  color: #FC9CFF;
-
-  &:before,
-    &:after{
-		content: "";
-		position: absolute;
-		height: 50%;
-		width: 100%;
-		left: 0;
-		z-index: -1;
-    }
-
-    &:before{
-		background: #ecf0f1;
-		top: 0;
-    }
-
-    &:after{
-    	background: #FFF;
-    	bottom: 0;
-    }
-}
-
-.sections {
-  width: 100%;
-  background: transparent;
-  border: none;
-  border-radius: 1%;
-  padding: 1rem;
-  box-shadow: 0 0 0 1px #000;
-}
-
-.message-form-control {
-  width: 100%;
-  background: transparent;
-  border: none;
-  border-radius: 0;
-  padding: 1rem;
-  box-shadow: 0 0 0 1px #000;
-  transition: all 0.5s ease;
-}
-
-.inputField{
-	width: 100%;
-	height: 20%;
-	border-radius: 1%;
-
-}
-
-.button {
-  background: #FFF;
-  border-radius: 0;
-  font-family: 'Russo One', sans-serif;
-  font-size:30px;
-  color: #288CF0;
-  font-weight: bold;
-  letter-spacing: 1px;
-  margin-top: 40px;
-  border: 2px solid #288CF0;
-  text-align: center;
-}
-
-.button:hover {
-  background: #288CF0;
-  color: #FFF;
-  border: 2px solid #288CF0;
-}
-
-.button.raised {
-  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0);
-}
-
-.button.raised:hover {
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-}
-
-.button.raised:active {
-  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
-}
-
-
-
