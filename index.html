@@ -7,24 +7,31 @@
     <link href="https://fonts.googleapis.com/css?family=Russo One" rel="stylesheet"><!--Google fonts-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!--Font Awesome-->
     <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="scriptForIndex.js"></script>
 </head>
 <body>
 
 <header class="Header">
-    <nav class="Container">
+    <nav id="navigation-container" class="navigation-container">
         <ul class="Navigation">
-            <li class="Navigation-current">Portfolio</li>
-            <li><a href="contact.html">Contact</a></li>
+            <div class="navigation-left"><h1 id="top-name" class="my-name-before-scroll">Katia Punter</h1></div>
+            <div class="navigation-right" id="menu-links">
+                <li><a href="#toFirst" class="Navigation-current fn-clickHandler">Prerequisites</a></li>
+                <li><a href="#toSecond" class="Navigation-current fn-clickHandler">Portfolio</a></li>
+                <li><a href="#toThird" class="Navigation-current fn-clickHandler">Contact</a></li>
+            </div>
         </ul><!--unordered list to make links easier to read-->
     </nav><!--html 5, navigation bar ends-->
 </header>
 
 <main class="Container">
-    <h1>Katia Punter</h1>
-    <p>Codebar student and occasional coach</p>
-    <p>Former Computer Science teacher</p>
-    <img class="Photo" src="photoProfile.png" alt="Photo of me">
-    <p>Founders and Coders prerequisites:</p>
+    <div class="text-about-me">
+        <p><a href="http://codebar.io/coaches">Codebar</a> fan, student and occasional coach <span class="dividing-pipe">|</span>Single parent since 2000 <span class="dividing-pipe">|</span><a href="https://en.wikipedia.org/wiki/School_Information_Management_System">Founder </a> in dreams<span class="dividing-pipe">|</span>Had taught <a href="https://darylcecile.net/">★ ★ ★</a> since 2003</p>
+        <img class="Photo" src="photoProfile.png" alt="Photo of me">
+    </div>
+    <div id="toFirst" class="prerequisites-subheading">
+        <p>Founders and Coders prerequisites:</p></br>
+    </div>
     <div class="flex-container-communities">
         <!-- <a href="https://www.codewars.com/users/missKatiaPunter"> -->
         <div class="communities-link" id="codewars-butn">
@@ -53,7 +60,55 @@
             <img src="Octocat.png" alt="Github" height="80%" width="90%">
         </div>
     </div>
+
+    <div id="toSecond" class="prerequisites-subheading">
+        <p>Other Projects and Communities:</p></br>
+    </div>
+    <div class="flex-container-communities">
+        <!-- <a href="https://www.codewars.com/users/missKatiaPunter"> -->
+        <div class="projects-link">
+            <img src="timesTablesPic.png" alt="Math Game Screenshot" height="80%" width="90%">
+        </br>
+            <a href="https://codepen.io/forTheLoveOfCode/pen/GvEeKQ">Times Tables Tester (pure JS)</a>
+        </div>
+        <div class="projects-link">
+            <img src="tributeToBill.png" alt="Bill from Kill Bill tribute page screenshot" width="90%">
+        </br>
+            <a href="https://codepen.io/forTheLoveOfCode/pen/PJxPKg">Tribute to Bill (bootstrap)</a>
+        </div>
+        <div class="projects-link">
+            <img src="canvasScreenSaver.png" alt="Canvas Screen" width="90%">
+        </br>
+            <a href="https://codepen.io/forTheLoveOfCode/pen/GMWqQE">Canvas Screensaver</a>
+        </div>
+        <div class="projects-link">
+            <img src="stackOverScreenshot.png" alt="Canvas Screen" width="90%">
+        </br>
+            <a href="https://stackoverflow.com/users/8607440/katia-punter">Stack Overflow</a>
+        </div>
+    </div>
  
+
+    <div id="toThird" class="contact-form-container">
+        <h1>Get in touch!<span class="chat-icon"><i class = "ion-android-chat"></i></span></h1>
+        <form action="https://formspree.io/katiapunter@gmail.com" method="POST">
+            <div class="input-field">
+                <input type="text" name="" required="">
+                <label>Name</label>
+            </div>
+            <div class="input-field">
+                <input type="text" name="" required="">
+                <label>E-mail</label>
+            </div>
+            <div class="input-field">
+                <input type="text" name="" required="">
+                <label>Message</label>
+            </div>
+            <span class="plane-icon"><input type="submit" name="" value="Send"></span>
+        </form>
+    </div>
+
+    
 
 </main>
 </body>
