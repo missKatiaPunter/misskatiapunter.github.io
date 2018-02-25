@@ -82,8 +82,14 @@ clearButton.addEventListener('click', function () {
 
 equalButton.addEventListener('click', function () {
     updateExpression(stringExpression +'=');
+    if(areThereErrors(stringExpression)){
+        updateExpression('Invalid expression');
+        stringExpression = '';
+        updateDisplay();
+    }else{
     stringExpression = '' + eval(stringExpression);
     updateDisplay();
+    }
 });
 
 function createButton (text) {
@@ -91,8 +97,8 @@ function createButton (text) {
     button.textContent = text;
     return button;
 }
-calculator.appendChild(calcScreen);
 
+calculator.appendChild(calcScreen);
 calcScreen.appendChild(mainExpression);
 calcScreen.appendChild(messages);
 
@@ -115,26 +121,22 @@ equalButton.classList.add('equal-button');
 calculator.appendChild(clearButton);
 clearButton.classList.add('clear-button');
 
-// function calculateStaff(stringExpression){
-// let arrNumPlusMin = stringExpression.match(/[+\-]?([0-9\.]+)/g);
-// let multDiv = stringExpression.match(/[*\/]/g);
-// let newArray = [arrNumPlusMin[0]];
-// for (let i=1; i<arrNumPlusMin.length; i++){
-//     if(arrNumPlusMin[i][0]==='-' || arrNumPlusMin[i][0]==='+'){
-//         let temp =[arrNumPlusMin[0], Number(substring(arrNumPlusMin[i]));
-//     }else{
-//         if(multDiv[0]==='*'){
-//             newArray.push(temp*arrNumPlusMin)
-//         }
-//     }
-// }
-// console.log(arrNumPlusMin, multDiv);
-// }
+function areThereErrors(string){
+    try {
+        if(eval(string)===Infinity){
+            return true;
+        }else{
+            return false;
+        }
+    }catch (e){
+        return true;
+    }
+}
 
 function updateDisplay () {
-    mainExpression.textContent = stringExpression.substring(0,15);;
+    mainExpression.textContent = stringExpression.substring(0,8);
 }
 
 function updateExpression(expression) {
-    messages.textContent = expression.substring(0,15);
+    messages.textContent = expression.substring(0,20);
 }
