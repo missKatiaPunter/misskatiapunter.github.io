@@ -1,0 +1,71 @@
+html, body{
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    background-color: lightslategray;
+    display: flex;
+    justify-content: center;
+    margin:0;
+    padding:0;
+}
+.calculator-whole {
+    margin-top: 0.2em;
+    padding: 0.2em;
+    width: 4em;
+    height: 6.5em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: lightcoral;
+}
+.screen-style{
+    border-radius: 6px;
+    width: 100%;
+    height: 25%;
+    background-image:radial-gradient(#444, #111);
+    text-align: right;
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 0.07em 0 0;
+    margin-bottom: 0.2em;
+    box-sizing: border-box;
+    border: 1px solid #000222;
+    border-radius: 6px;
+    background-color: #5e5d49;
+}
+.main-expression {
+    font-size: 1em;
+    margin-bottom: 0;
+}
+.messages {
+    margin-top:0;
+    font-size: 0.5em;
+    color: red;
+}
+.single-button {
+    border-radius: 6px;
+    width: 24.2%;
+    height: 14%;
+    background-color: goldenrod;
+    border: 0.5px solid black;
+    margin-right: 0.05em;
+    outline: 0;
+}
+.clear-button {
+    border-radius: 6px;
+    width: 73.5%;
+    height: 14%;
+    background-color: #FF1A41;
+    border: 0.5px solid black;
+    margin-top: -2.05em;
+    outline: 0;
+}
+.equal-button {
+    border-radius: 6px;
+    width: 25%;
+    height: 28%;
+    background-color: goldenrod;
+    border: 0.5px solid black;
+    outline: 0;
+}
